@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/tetriminos/I.tscn" type="PackedScene" id=1]
+
+[node name="Board" type="Node2D"]
+
+[node name="Border" type="KinematicBody2D" parent="."]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Border"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 336, 0, 336 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Border"]
+color = Color( 0.368627, 0.368627, 0.368627, 1 )
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 336, 0, 336 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Border"]
+polygon = PoolVector2Array( 16, 320, 176, 320, 176, 336, 16, 336 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Border"]
+color = Color( 0.368627, 0.368627, 0.368627, 1 )
+polygon = PoolVector2Array( 16, 320, 176, 320, 176, 336, 16, 336 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border"]
+polygon = PoolVector2Array( 176, 0, 192, 0, 192, 336, 176, 336 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Border"]
+color = Color( 0.368627, 0.368627, 0.368627, 1 )
+polygon = PoolVector2Array( 176, 0, 192, 0, 192, 336, 176, 336 )
+
+[node name="Node2D" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 50, 0 )
+
+[node name="Lines" type="Node2D" parent="."]

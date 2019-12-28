@@ -1,4 +1,4 @@
-extends "res://src/scripts/tetriminos/base.gd"
+extends KinematicBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -6,7 +6,7 @@ extends "res://src/scripts/tetriminos/base.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	set_color(Color("#FFFF00"))
+	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
