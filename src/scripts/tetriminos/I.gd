@@ -12,7 +12,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-var drop_wait: float = 16
+var drop_wait: float = 256
 var accu_delta: float = 0
 
 func _physics_process(delta):

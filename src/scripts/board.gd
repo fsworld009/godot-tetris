@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Node2D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,3 +11,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Line_area_entered(area):
+	print('enter')
+
+
+func _on_Line_area_exited(area):
+	print('leave')

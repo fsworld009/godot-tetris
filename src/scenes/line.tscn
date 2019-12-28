@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scripts/line.gd" type="Script" id=1]
+
+[node name="Line" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="grid" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionPolygon2D" parent="grid"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid2" type="Area2D" parent="."]
+position = Vector2( 16, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid2"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid3" type="Area2D" parent="."]
+position = Vector2( 32, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid3"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid4" type="Area2D" parent="."]
+position = Vector2( 48, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid4"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid5" type="Area2D" parent="."]
+position = Vector2( 64, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid5"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid6" type="Area2D" parent="."]
+position = Vector2( 80, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid6"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid7" type="Area2D" parent="."]
+position = Vector2( 96, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid7"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid8" type="Area2D" parent="."]
+position = Vector2( 112, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid8"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid9" type="Area2D" parent="."]
+position = Vector2( 128, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid9"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+
+[node name="grid10" type="Area2D" parent="."]
+position = Vector2( 144, 0 )
+
+[node name="collision" type="CollisionPolygon2D" parent="grid10"]
+polygon = PoolVector2Array( 1, 1, 15, 1, 15, 15, 1, 15 )
+[connection signal="body_entered" from="grid" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid2" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid2" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid3" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid3" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid4" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid4" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid5" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid5" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid6" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid6" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid7" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid7" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid8" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid8" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid9" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid9" to="." method="_on_grid_body_exited"]
+[connection signal="body_entered" from="grid10" to="." method="_on_grid_body_entered"]
+[connection signal="body_exited" from="grid10" to="." method="_on_grid_body_exited"]
