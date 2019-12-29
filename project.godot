@@ -19,6 +19,10 @@ config/name="Tetris"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://src/scripts/globals.gd"
+
 [display]
 
 window/size/width=900

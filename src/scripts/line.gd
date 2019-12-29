@@ -1,10 +1,14 @@
 extends Node2D
 
-var blocks: int = 0
+const Tetrimino = preload('res://src/scripts/tetriminos/base.gd')
+const Block = preload('res://src/scripts/block.gd')
+var blocks = {}
 
-func _on_grid_body_entered(body):
-	blocks += 1
+func _on_grid_body_shape_entered(body_id, body: Tetrimino, body_shape: int, area_shape):
+	var block: Block = body.get_child(body_shape)
+	blocks[block.id] = block
 
 
-func _on_grid_body_exited(body):
-	blocks -= 1
+func _on_grid_body_shape_exited(body_id, body: Tetrimino, body_shape: int, area_shape):
+	var block: Block = body.get_child(body_shape)
+	blocks.erase(block.id)

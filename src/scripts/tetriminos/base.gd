@@ -4,25 +4,11 @@ const Block = preload('res://src/scripts/block.gd')
 var PRESSED_REACTION_DELTA: float = 12
 var PRESSED_CONTINUE_DELTA: float = 2
 
-var blocks: Array = []
+var remain_blocks = 4
 var drop_wait: float = 256
 var accu_delta: float = 0
 var controlling_tetrimino = true
 var pressed_delta: float = PRESSED_REACTION_DELTA
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	blocks = ($Blocks as Node2D).get_children()
-	print(blocks)
-	# move Collision2D nodes from each child Block to this tetrimino
-	# to get the collision area of this tetrimino shape
-	for block in blocks:
-		var collision_node: CollisionPolygon2D = block.get_node("collision")
-		block.remove_child(collision_node)
-		add_child(collision_node)
-		# node position is reset to 0,0 after move, manually set it again
-		collision_node.set_position(block.position)
 
 func _physics_process(delta):
 	if controlling_tetrimino:
@@ -54,5 +40,5 @@ func _physics_process(delta):
 	
 
 func set_color(color: Color):
-	for block in blocks:
+	for block in get_children():
 		(block as Block).set_color(color)
